@@ -19,8 +19,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-# define ERROR_MESSAGE "Please enter \n\t\"./fractol mandelbrot\" or \n\t\" \
-						./fractol julia <value_1> <value_2>\""
+# define ERROR_MESSAGE "Please enter\n\t\"./fractol mandelbrot\" or\n\t\"./fractol \
+julia <value_1> <value_2>\"\n"
 
 # define WIDTH 1000
 # define HIGHT 800
