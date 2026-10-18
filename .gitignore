@@ -1,0 +1,16 @@
+# Build artifacts
+*.o
+fractol
+
+# Libraries cloned by the Makefile
+mlx/
+libft/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Secrets
+.env
+secrets/
