@@ -38,8 +38,8 @@ int	main(int ac, char **av)
 {
 	t_fractol	fractol;
 
-	if ((2 == ac && !ft_strncmp(av[1], "mandelbrot", 10)) || (4 == ac
-			&& !ft_strncmp(av[1], "julia", 5)))
+	if ((2 == ac && !ft_strncmp(av[1], "mandelbrot", 11)) || (4 == ac
+			&& !ft_strncmp(av[1], "julia", 6)))
 	{
 		fractol.name = av[1];
 		if (4 == ac)
