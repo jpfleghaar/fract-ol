@@ -7,10 +7,11 @@ HEADER = fractol.h
 
 MLX_DIR = mlx
 MLX_REPO = https://github.com/codam-coding-college/MLX42.git
+MLX_TAG = v2.4.2
 
 # New library example (libft)
 LIBFT_DIR = libft
-LIBFT_REPO = https://github.com/Lumelig/libft.git
+LIBFT_REPO = https://github.com/jpfleghaar/libft.git
 
 MLX = $(MLX_DIR)/build/libmlx42.a
 LIBFT = $(LIBFT_DIR)/libft.a
@@ -18,7 +19,7 @@ LIBFT = $(LIBFT_DIR)/libft.a
 # Combine library paths and link flags
 LIBS = -ldl -lglfw -pthread -lm
 LIB_DIRS = -L$(MLX_DIR)/build -L$(LIBFT_DIR)
-INCLUDES = -I$(MLX_DIR)/includes/MLX42 -I$(LIBFT_DIR)/libft
+INCLUDES = -I$(MLX_DIR)/include/MLX42 -I$(LIBFT_DIR)
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -Wunreachable-code
@@ -27,7 +28,7 @@ all: mlx libft ${NAME}
 
 mlx:
 	@if [ ! -d "$(MLX_DIR)" ]; then \
-		git clone $(MLX_REPO) $(MLX_DIR); \
+		git clone --branch $(MLX_TAG) --depth 1 $(MLX_REPO) $(MLX_DIR); \
 	fi
 	@cmake ./mlx/ -B $(MLX_DIR)/build
 	@make -C $(MLX_DIR)/build -j4
